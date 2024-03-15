@@ -13,19 +13,15 @@ class ViewController: UIViewController {
     let AnswerPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"Answer")!.data)
     let IncorrectPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"Incorrect")!.data)
     let TapPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"tap")!.data)
-
-
+    
+    
     @IBOutlet var label1:UILabel!
     @IBOutlet var label2:UILabel!
     @IBOutlet var label3:UILabel!
     @IBOutlet var label4:UILabel!
     @IBOutlet var Button1:UIButton!
     @IBOutlet var Button2:UIButton!
-    
-//    let number1 = Int.random(in: 1...9)
-//    let number2 = Int.random(in: 1...9)
-//    let number3 = Int.random(in: 1...9)
-//    var number4 = 0
+
     
     var select = 0
     
@@ -40,17 +36,18 @@ class ViewController: UIViewController {
         
         Button2.layer.borderColor = UIColor.white.cgColor
         Button2.layer.borderWidth = 1.0
-
+        
         generateCalculations()
     }
     @IBAction func Button() {
         TapPlayer.play()
-        
-
-    
+        Button1.setTitle("", for: .normal)
+        Button2.setTitle("", for: .normal)
         generateCalculations()
         
     }
+    
+    
     
     @IBAction func changeButton1() {
         TapPlayer.play()
@@ -177,6 +174,8 @@ class ViewController: UIViewController {
         label3.text = String(number3)
         label4.text = String(number4)
     }
+    
+    
     
 }
 
