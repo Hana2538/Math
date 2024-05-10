@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		330537E52B7875C300889793 /* math icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 330537E42B7875C300889793 /* math icon.jpeg */; };
+		337BB0012BD399D500AD497A /* number_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 337BB0002BD399D500AD497A /* number_1.png */; };
 		33AB86992B63BB92005C3F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AB86982B63BB92005C3F4D /* AppDelegate.swift */; };
 		33AB869B2B63BB92005C3F4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AB869A2B63BB92005C3F4D /* SceneDelegate.swift */; };
 		33AB869D2B63BB92005C3F4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AB869C2B63BB92005C3F4D /* ViewController.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		330537E42B7875C300889793 /* math icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "math icon.jpeg"; sourceTree = "<group>"; };
+		337BB0002BD399D500AD497A /* number_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = number_1.png; sourceTree = "<group>"; };
 		33AB86952B63BB92005C3F4D /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AB86982B63BB92005C3F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33AB869A2B63BB92005C3F4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 				33AB869A2B63BB92005C3F4D /* SceneDelegate.swift */,
 				33AB869C2B63BB92005C3F4D /* ViewController.swift */,
 				33AB869E2B63BB92005C3F4D /* Main.storyboard */,
-				330537E42B7875C300889793 /* math icon.jpeg */,
+				337BB0002BD399D500AD497A /* number_1.png */,
 				33AB86A12B63BB94005C3F4D /* Assets.xcassets */,
 				33AB86A32B63BB94005C3F4D /* LaunchScreen.storyboard */,
 				33AB86A62B63BB94005C3F4D /* Info.plist */,
@@ -106,7 +106,7 @@
 				};
 			};
 			buildConfigurationList = 33AB86902B63BB92005C3F4D /* Build configuration list for PBXProject "Math" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -128,8 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337BB0012BD399D500AD497A /* number_1.png in Resources */,
 				33AB86A52B63BB94005C3F4D /* LaunchScreen.storyboard in Resources */,
-				330537E52B7875C300889793 /* math icon.jpeg in Resources */,
 				33AB86A22B63BB94005C3F4D /* Assets.xcassets in Resources */,
 				33AB86A02B63BB92005C3F4D /* Main.storyboard in Resources */,
 			);
@@ -222,7 +222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -279,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

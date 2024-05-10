@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let AnswerPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"Answer")!.data)
     let IncorrectPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"Incorrect")!.data)
     let TapPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"tap")!.data)
+    let SorryPlayer = try!AVAudioPlayer(data: NSDataAsset(name:"sorry")!.data)
     
     
     @IBOutlet var label1:UILabel!
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet var label4:UILabel!
     @IBOutlet var Button1:UIButton!
     @IBOutlet var Button2:UIButton!
-
+    
     
     var select = 0
     
@@ -57,6 +58,11 @@ class ViewController: UIViewController {
     @IBAction func changeButton2() {
         TapPlayer.play()
         select = 2
+    }
+    
+    @IBAction func notanswer(){
+        SorryPlayer.play()
+        generateCalculations()
     }
     
     @IBAction func plus(){
@@ -119,52 +125,86 @@ class ViewController: UIViewController {
             checkNumber2 = 4
         }
         
-        if ope1 == checkNumber1 {
-            AnswerPlayer.play()
-            print("正解")
-        }else  if ope2 == checkNumber2{
+        if ope1 == checkNumber1 && ope2 == checkNumber2 {
             AnswerPlayer.play()
             print("正解")
         }else {
             print("残念")
             IncorrectPlayer.play()
         }
-       
+        
         
     }
+    
     
     @IBAction func backHomeButton(){
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     func generateCalculations(){
-        let number1 = Int.random(in: 1...9)
-        let number2 = Int.random(in: 1...9)
-        let number3 = Int.random(in: 1...9)
+        var number1 = Int.random(in: 1...9)
+        var number2 = Int.random(in: 1...9)
+        var number3 = Int.random(in: 1...9)
         var number4 = 0
         
-        ope1 = Int.random(in: 1...4)
-        ope2 = Int.random(in: 1...4)
-        
-        var currentNumber: Int = 0
-        
-        if ope1 == 1 {
-            currentNumber = number1 + number2
-        }else if ope1 == 2{
-            currentNumber = number1 - number2
-        }else if ope1 == 3{
-            currentNumber = number1 * number2
-        }else if ope1 == 4{
-            currentNumber = number1 / number2
-        }
-        if ope2 == 1 {
-            number4 = currentNumber + number3
-        }else if ope2 == 2{
-            number4 = currentNumber - number3
-        }else if ope2 == 3{
-            number4 = currentNumber * number3
-        }else if ope2 == 4{
-            number4 = currentNumber / number3
+        while(true){
+            number1 = Int.random(in: 1...9)
+            number2 = Int.random(in: 1...9)
+            number3 = Int.random(in: 1...9)
+            number4 = 0
+            
+            ope1 = Int.random(in: 1...4)
+            ope2 = Int.random(in: 1...4)
+            
+            var currentNumber: Int = 0
+            
+            if(ope1>ope2){
+                if ope1 == 1 {
+                    currentNumber = number1 + number2
+                }else if ope1 == 2{
+                    currentNumber = number1 - number2
+                }else if ope1 == 3{
+                    currentNumber = number1 * number2
+                }else if ope1 == 4{
+                    currentNumber = number1 / number2
+                }
+                if ope2 == 1 {
+                    number4 = currentNumber + number3
+                }else if ope2 == 2{
+                    number4 = currentNumber - number3
+                }else if ope2 == 3{
+                    number4 = currentNumber * number3
+                }else if ope2 == 4{
+                    number4 = currentNumber / number3
+                }
+                
+                if number4 >= 0 {
+                    break
+                }
+                else {
+                    if ope2 == 1 {
+                        currentNumber = number2 + number3
+                    }else if ope2 == 2{
+                        currentNumber = number2 - number3
+                    }else if ope2 == 3{
+                        currentNumber = number2 * number3
+                    }else if ope2 == 4{
+                        currentNumber = number2 / number3
+                    }
+                    if ope1 == 1 {
+                        number4 = number1 + currentNumber
+                    }else if ope1 == 2{
+                        number4 = number1 - currentNumber
+                    }else if ope1 == 3{
+                        number4 = currentNumber * number1
+                    }else if ope1 == 4{
+                        number4 = currentNumber / number1
+                    }
+                    if number4 >= 0 {
+                        break
+                    }
+                }
+            }
         }
         
         
